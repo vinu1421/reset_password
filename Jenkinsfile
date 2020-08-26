@@ -36,7 +36,7 @@ node() {
     stage('Build') {
 
         checkoutrepo()    
-        sh ''
+        sh 'script\resetpass.sh'
 
 
             
