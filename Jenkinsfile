@@ -35,7 +35,8 @@ node() {
 
     stage('Build') {
 
-        checkoutrepo()    
+        checkoutrepo()
+        sh "chmod +x -R ${env.WORKSPACE}"    
         sh("""script/resetpass.sh""")
 
 
