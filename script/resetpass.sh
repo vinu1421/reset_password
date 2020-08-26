@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 environment=$Environment
 username=$Username
 password=$(mkpasswd -l 12 2> /dev/null)
