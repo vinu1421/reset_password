@@ -14,4 +14,4 @@ curl -k --user elastic:gV2okuT65fJwP3fkrOyd -XPOST ${url1}/_security/user/${user
 
 fi
 
-echo $password
+echo "The password is :"  $password
