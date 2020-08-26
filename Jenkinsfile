@@ -1,11 +1,18 @@
 
+
 properties([
     [$class: 'JiraProjectProperty'],
+    
      parameters([
-        choice(choices: ['pro,nonpro'],
-        description: 'select environment',
-        name: 'Environment')]
-        )])
+         string(defaultValue: '',
+         description: 'Enter the username',
+         name: 'Username',
+         trim: false),
+         choice(choices: ['pro', 'non-pro'],
+         description: 'Select the environment',
+         name: 'Environment')])
+         
+])        
 
 
 node() {
