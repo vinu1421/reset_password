@@ -6,3 +6,19 @@ properties([
         description: 'select environment',
         name: 'Environment')]
         )])
+
+
+node() {
+
+
+
+    stage('Build') { 
+    
+        sh 'echo "testing"'
+
+
+            
+
+    
+
+    }
