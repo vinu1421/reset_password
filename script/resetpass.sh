@@ -18,4 +18,5 @@ if [[ response -eq 200 ]]; then
 echo "Password reset successful, The password is :"  $password
 else
 echo "Reset failed, please check the username"
+exit 2
 fi
