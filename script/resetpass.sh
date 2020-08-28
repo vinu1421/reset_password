@@ -15,7 +15,7 @@ curl -k --user elastic:gV2okuT65fJwP3fkrOyd -XPOST ${url1}/_security/user/${user
 fi
 
 if [[ response -eq 200 ]]; then
-
 echo "Password reset successful, The password is :"  $password
 else
 echo "Reset failed, please check the username"
+fi
