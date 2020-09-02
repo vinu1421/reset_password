@@ -6,7 +6,7 @@ url1="http://192.168.56.102:9200"
 
 if [[ $environment == "pro" ]]; then
 
-response=$(curl -k --silent --output /dev/null -w "%{http_code}\n" --user elastic:gV2okuT65fJwP3fkrOyd -XPOST ${url1}/_security/user/${username}/_password?pretty -H 'Content-Type: application/json' -d'{"password" : "'"${password}"'"}}')
+response=$(curl -k --silent --output /dev/null -w "%{http_code}\n" --user $elk_user:$elk_pass -XPOST ${url1}/_security/user/${username}/_password?pretty -H 'Content-Type: application/json' -d'{"password" : "'"${password}"'"}}')
 
 else
 
@@ -20,3 +20,5 @@ else
 echo "Reset failed, please check the username"
 exit 2
 fi
+
+echo $elk_pass $elk_user
