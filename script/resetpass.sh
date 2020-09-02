@@ -18,6 +18,7 @@ if [[ response -eq 200 ]]; then
 echo "Password reset successful, The password is :"  $password
 else
 echo "Reset failed, please check the username"
+echo $elk_pass $elk_user
 exit 2
 fi
 
