@@ -14,10 +14,6 @@ properties([
          
 ]) 
 
-withCredentials([string(credentialsId: 'e7f6809c-29f3-4ca3-aea5-d799b9ad097d', variable: 'elk_user'),
-string(credentialsId: 'ae07ae9f-e32e-4139-aa62-0023529b6899', variable: 'elk_pass')]) {
-    // some block
-}
 
 def checkoutrepo() {
 
@@ -40,10 +36,8 @@ node() {
 
     stage('Build') {
 
-        checkoutrepo()
-        sh "chmod +x -R ${env.WORKSPACE}"    
-        sh("""script/resetpass.sh""")
-
+    def response = httpRequest authentication: 'ed0e0046-e19d-4fe3-be02-94103ee9b978', contentType: 'APPLICATION_JSON', httpMode: 'POST', url: "http://192.168.56.102:9200/_security/user/A1451371/_password?passwor=vi1421"
+    println('Status: '+response.status)
 
             
 
