@@ -13,13 +13,13 @@ else
 curl -k --user elastic:gV2okuT65fJwP3fkrOyd -XPOST ${url1}/_security/user/${username}/_password?pretty -H 'Content-Type: application/json' -d'{"password" : ${password}}'
 
 fi
+echo $response
+#if [[ response -eq 200 ]]; then
+#echo "Password reset successful, The password is :"  $password
+#else
+#echo "Reset failed, please check the username"
+#echo $elk_pass $elk_user
+#exit 2
+#fi
 
-if [[ response -eq 200 ]]; then
-echo "Password reset successful, The password is :"  $password
-else
-echo "Reset failed, please check the username"
-echo $elk_pass $elk_user
-exit 2
-fi
-
-echo $elk_pass $elk_user
+#echo $elk_pass $elk_user
