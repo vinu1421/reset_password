@@ -14,6 +14,11 @@ properties([
          
 ]) 
 
+withCredentials([usernamePassword(credentialsId: '79bf41e9-bc79-4f76-9247-3e7a7af5ead9',
+passwordVariable: 'elk_pass', usernameVariable: 'elk_user')]) {
+    // some block
+}
+
 def checkoutrepo() {
 
 checkout([$class: 'GitSCM',
