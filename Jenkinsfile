@@ -14,8 +14,8 @@ properties([
          
 ]) 
 
-withCredentials([usernamePassword(credentialsId: '79bf41e9-bc79-4f76-9247-3e7a7af5ead9',
-passwordVariable: 'elk_pass', usernameVariable: 'elk_user')]) {
+withCredentials([string(credentialsId: 'e7f6809c-29f3-4ca3-aea5-d799b9ad097d', variable: 'elk_user'),
+string(credentialsId: 'ae07ae9f-e32e-4139-aa62-0023529b6899', variable: 'elk_pass')]) {
     // some block
 }
 
