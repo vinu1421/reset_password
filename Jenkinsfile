@@ -4,7 +4,7 @@ properties([
     
      parameters([
          string(defaultValue: '',
-         description: 'Enter the username',
+         description: 'Enter the username. supports comma seperation eg: username1,username2',
          name: 'Username',
          trim: false),
          choice(choices: ['pro', 'non-pro'],
